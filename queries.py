@@ -168,7 +168,7 @@ def get_linkedin_viewer_count(username=None, password=None):
             b.get_form_field(f, "session_key")
             b.get_form_field(f, "session_password")
             form_num = str(n+1)
-        except twill.errors.TwillException:
+        except TwillException:
             pass
     if form_num == '':
         log.err('Failed to parse LinkedIn login page - page format may have changed.')
