@@ -161,8 +161,8 @@ def get_linkedin_viewer_count(username=None, password=None):
     go("https://www.linkedin.com/nhome/")
     #fv("login", 'session_password', 'LetsTryPrime')
     #fv("login", 'session_key', 'ms_DerrickWortham@endian.co.za')
-    fv("login", 'session_key', username)
-    fv("login", 'session_password', password)
+    fv("1", 'session_key', username)
+    fv("1", 'session_password', password)
     submit()
     go('http://www.linkedin.com/wvmx/profile?trk=nav_responsive_sub_nav_wvmp')
 
