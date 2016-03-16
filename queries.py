@@ -157,6 +157,7 @@ def get_linkedin_viewer_count(username=None, password=None):
     from twill import get_browser
     from twill.commands import add_extra_header, go, fv, submit, reset_browser
     reset_browser()
+    from twill.errors import *
     add_extra_header('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.132 Safari/537.36')
     go("https://www.linkedin.com/nhome/")
     # Added because LinkedIn login page no longer names the login form.
