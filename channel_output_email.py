@@ -17,11 +17,12 @@ class EmailOutputChannel(OutputChannel):
     def do_send_alert(self, input_channel=None, canarydrop=None, **kwargs):
         try:
             msg = input_channel.format_canaryalert(
-                                          params={'subject_required':True,
-                                                  'from_display_required':True,
-                                                  'from_address_required':True},
-                                          canarydrop=canarydrop,
-                                          **kwargs)
+                host=settings.MANAGER_DOMAIN,
+                params={'subject_required':True,
+                        'from_display_required':True,
+                        'from_address_required':True},
+                canarydrop=canarydrop,
+                **kwargs)
 
             mandrill_client = mandrill.Mandrill(settings.MANDRILL_API_KEY)
             message = {
