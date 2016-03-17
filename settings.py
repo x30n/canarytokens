@@ -2,7 +2,7 @@ import os
 import sys
 settingsmodule = sys.modules[__name__]
 
-DEBUG=False
+DEBUG=True
 
 LISTEN_DOMAIN=""
 
