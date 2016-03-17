@@ -16,6 +16,7 @@ class EmailOutputChannel(OutputChannel):
 
     def do_send_alert(self, input_channel=None, canarydrop=None, **kwargs):
         try:
+            log.msg('Set manager domain is: {domain}'.format(domain=settings.MANAGER_DOMAIN))
             msg = input_channel.format_canaryalert(
                 host=settings.MANAGER_DOMAIN,
                 params={'subject_required':True,
